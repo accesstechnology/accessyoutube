@@ -1,0 +1,57 @@
+.title {padding:1rem;}
+.front #v {font-size:3rem; height: 4rem;}
+.front .button {padding:1.2rem 1rem; font-size:1.5rem;}
+.result {padding-top:1rem;}
+
+.card {
+    margin-bottom:1.5rem;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #272727;
+    border-radius: 2px; }
+.card .content {
+    height:2rem;
+    padding: 0.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px; }
+.card p {
+    margin: 0; }
+.card a {
+    color: #2199e8;
+    margin-right: 1.3rem;
+    /*transition: blue 0.3s ease;*/
+    text-transform: uppercase;
+    text-decoration: none; }
+/*.card .image {*/
+/*    position: relative; }*/
+.card .image img { background-color: black;
+    max-height: 12.7rem;
+}
+
+.focus {cursor: pointer;}
+a:focus { outline: none; }
+
+.focused {box-shadow: 0 0 0 3px #2199e8; background-color: #3d7599;}
+.focused a {color: white;}
+
+.videoWrapper{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    background:black;
+    top: 0;
+    left: 0;
+    /*space for header*/
+    margin-top: 160px;
+    /*not sure why this padding is needed??*/
+    padding-bottom: 8px;
+}
+
+.video { height:100%;}
+
+i {font-size: 30px;}
+.control {margin-bottom: 0px; padding-bottom: 0px; height: 70px;}
+.control p {line-height: 1}
+
+.popular {margin-top:4rem; margin-bottom:1.5rem; font-style:italic; color:#3d7599;}
