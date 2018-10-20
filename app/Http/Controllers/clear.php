@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -27,7 +28,12 @@ class clear extends Controller
      */
     public function create()
     {
-        //
+               $words = DB::table('bad_words')->lists('word');
+
+        foreach ($words as $word) {
+
+            echo "'$word',";
+        }
     }
 
     /**

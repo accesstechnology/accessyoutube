@@ -14,7 +14,9 @@
 Route::get('/', 'home@index');
 
 
-Route::get('clear', 'clear@index');
+// Route::get('clear', 'clear@index');
+
+Route::get('dbCheck', 'clear@create');
 
 Route::match(array('GET', 'POST'),'{v}', [
     'middleware' => ['rewrite','dbCheck'],
