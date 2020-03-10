@@ -17,13 +17,19 @@ class play extends Controller
         }
         else {
 
-        $api = getenv('youtubeAPI');
-        $countryCode = getenv('countryCode');
-        $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='.$vidId.'&regionCode='.$countryCode.'&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&maxResults=1&key='.$api;
+        // $api = getenv('youtubeAPI');
+        // $countryCode = getenv('countryCode');
+        // $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='.$vidId.'&regionCode='.$countryCode.'&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&maxResults=1&key='.$api;
 
-        $content = file_get_contents($url);
-        $json = json_decode($content, true);
-        $v = rewrite($json['items'][0]['snippet']['title']);
+        // $content = file_get_contents($url);
+        // $json = json_decode($content, true);
+        
+        $output = shell_exec('youtube-dl -J ytsearch1:'.$v.' --flat-playlist' );
+    
+        $json = json_decode($output);
+        // $v = rewrite($json['items'][0]['snippet']['title']);
+        
+        $v = rewrite($json->entries[0]->id);
 
         session(['v' => $v]);
 
@@ -58,13 +64,20 @@ class play extends Controller
 
         $n++;
 
-        $api = getenv('youtubeAPI');
-        $countryCode = getenv('countryCode');
-        $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='.$v.'&regionCode='.$countryCode.'&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&maxResults=50&key='.$api;
+        // $api = getenv('youtubeAPI');
+        // $countryCode = getenv('countryCode');
+        // $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='.$v.'&regionCode='.$countryCode.'&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&maxResults=50&key='.$api;
 
-        $content = file_get_contents($url);
-        $json = json_decode($content, true);
-        $vidId = $json['items'][$n]['id']['videoId'];
+        // $content = file_get_contents($url);
+        // $json = json_decode($content, true);
+        
+        $output = shell_exec('youtube-dl -J ytsearch50:'.$v.' --flat-playlist' );
+    
+        $json = json_decode($output);
+        
+        
+        // $vidId = $json['items'][$n]['id']['videoId'];
+        $vidId = $json->entries[$n]->id;
 
         session(['n' => $n]);
 
