@@ -13,7 +13,6 @@
 
 Route::get('/', 'home@index');
 
-
 // Route::get('clear', 'clear@index');
 
 Route::get('dbCheck', 'clear@create');
@@ -26,4 +25,3 @@ Route::match(array('GET', 'POST'),'{v}', [
 Route::get('play/next', 'play@next');
 
 Route::get('play/{vidId}', 'play@index');
-
