@@ -12,6 +12,8 @@ class search extends Controller
 
     public function index(Request $request, $v)
     {
+        
+        $v = str_replace("'","",$v);
 
         $request->session()->forget('v');
         $request->session()->forget('n');
