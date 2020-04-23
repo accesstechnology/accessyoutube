@@ -1,4 +1,4 @@
-{!! Form::open(array('url' => 'v')) !!}
+{!! Form::open(array('url' => 'youtube/v')) !!}
 <div class="row column search">
   <div class="input-group search {{ $front or 'result'}}">
     <!--<span class="input-group-label"><i class="fi-universal-access large icon"></i></span>-->
