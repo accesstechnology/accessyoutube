@@ -11,17 +11,17 @@
 |
 */
 
-Route::get('/', 'home@index');
+Route::get('/youtube/', 'home@index');
 
 // Route::get('clear', 'clear@index');
 
 Route::get('dbCheck', 'clear@create');
 
-Route::match(array('GET', 'POST'),'{v}', [
+Route::match(array('GET', 'POST'),'/youtube/{v}', [
     'middleware' => ['rewrite','dbCheck'],
     'uses' => 'search@index'
 ]);
 
-Route::get('play/next', 'play@next');
+Route::get('/youtube/play/next', 'play@next');
 
-Route::get('play/{vidId}', 'play@index');
+Route::get('/youtube/play/{vidId}', 'play@index');
