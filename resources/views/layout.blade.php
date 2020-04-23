@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" rel='stylesheet'>
-        <link rel="stylesheet" href="{{env('APP_URL')}}/css/css.css">
+        <link rel="stylesheet" href="/css/css.css">
     </head>
     <body>
 
@@ -20,8 +20,8 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.min.js"></script>
-        <script src="{{env('APP_URL')}}/js/plugins.js"></script>
-        <script src="{{env('APP_URL')}}/js/main.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
 
         <script>
           if (!("autofocus" in document.createElement("input"))) {
