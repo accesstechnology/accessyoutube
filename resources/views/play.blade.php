@@ -25,7 +25,7 @@
       </div>
        <div class="column">
         <div class="card focus control">
-          <a href="{{env("APP_URL"}}/{{ $v }}" accesskey="b"><i class="fi-previous"></i><p>Back to search results</p></a>
+          <a href="{{env('APP_URL'}}/{{ $v }}" accesskey="b"><i class="fi-previous"></i><p>Back to search results</p></a>
         </div>
       </div>
     </div>
