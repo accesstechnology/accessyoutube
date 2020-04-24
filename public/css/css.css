@@ -55,3 +55,11 @@ i {font-size: 30px;}
 .control p {line-height: 1}
 
 .popular {margin-top:4rem; margin-bottom:1.5rem; font-style:italic; color:#3d7599;}
+
+.sub {
+    font-style: italic;
+}
+
+.support {
+    width: 200px;
+}
