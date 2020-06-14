@@ -18,38 +18,62 @@ class search extends Controller
         $request->session()->forget('v');
         $request->session()->forget('n');
 
+        //YT API
         // $api = getenv('youtubeAPI');
-        // $countryCode = getenv('countryCode');
+         $countryCode = getenv('countryCode');
         // $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='.$v.'&regionCode='.$countryCode.'&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&maxResults=12&key='.$api;
-
         // $content = file_get_contents($url);
         // $json = json_decode($content, true);
         
-        $output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
-    
-        $json = json_decode($output);
+        
+        //YT-DL
+        //$output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
+        //$json = json_decode($output);
+        
+        
+        //search-ajax
+        
+        $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
+        
+        $content = file_get_contents($url);
+        $json = json_decode($content, true);
 
         $n=0;
-
-
-        // dd($json);
+        
+        //API
         // foreach($json['items'] as $item) {
-        foreach ($json->entries as $item) {
+        
+        //YT-DL
+        // foreach ($json->entries as $item) {
+        
+        //ajax serach
+        $i=1;
+        foreach ($json['video'] as $item){
 
             $link = new \stdClass;
+            
+            //FOR V3 API
             // $link -> vidId = $item['id']['videoId'];
             // $link -> title = $item['snippet']['title'];
             // $link -> thumb = $item['snippet']['thumbnails']['high']['url'];
             
-            $link -> vidId = $item->id;
             
-            if (isset($item->title)) {
-            $link -> title = $item->title;
+            //FOR YT-DL
+            //$link -> vidId = $item->id;
+            
+            //serach ajax
+            
+            $link -> vidId = $item['encrypted_id'];
+            
+            if (isset($item['title'])) {
+            $link -> title = $item['title'];
             }
             else {
                 $link -> title = $v;
             }
-            $link -> thumb = "https://img.youtube.com/vi/".$item->id."/hqdefault.jpg";
+            
+            
+            $link -> thumb = "https://img.youtube.com/vi/".$link->vidId."/hqdefault.jpg";
 
             if ($n+1 == 10){ $link -> accesskey = '0'; }
             elseif ($n+1 == 11){ $link -> accesskey = 'a'; }
@@ -60,8 +84,10 @@ class search extends Controller
 
             //temp store array of vidId relative to search result position for next video functionality
             // $request->session()->flash($item['id']['videoId'], $n);
-            $request->session()->flash($item->id, $n);
+            $request->session()->flash($link->vidId, $n);
             $n++;
+            
+            if ($i++ == 12) break;
 
         }
 
