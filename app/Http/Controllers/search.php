@@ -35,6 +35,8 @@ class search extends Controller
         
         $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
         
+        // $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
+        
         $content = file_get_contents($url);
         $json = json_decode($content, true);
 

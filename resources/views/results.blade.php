@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'ACCESS: YouTube')
+@section('title', 'access: youtube')
 
 @section('content')
 
