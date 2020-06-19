@@ -7,11 +7,11 @@
         <meta name="description" content="access: Youtube: An accessible interface for users of assistive technology to search for and play YouTube videos independently.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/youtube/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/youtube/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/youtube/favicon-16x16.png">
-        <link rel="manifest" href="/youtube/site.webmanifest">
-        <link rel="mask-icon" href="/youtube/safari-pinned-tab.svg" color="#2e1433">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{env('APP_URL')}}/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{env('APP_URL')}}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/favicon-16x16.png">
+        <link rel="manifest" href="{{env('APP_URL')}}/site.webmanifest">
+        <link rel="mask-icon" href="{{env('APP_URL')}}/safari-pinned-tab.svg" color="#2e1433">
         <meta name="msapplication-TileColor" content="#2e1433">
         <meta name="theme-color" content="#f7f5f8">
 
