@@ -5,7 +5,7 @@
         @if(!isset($front))
         
         <div class="input-group-button" style="width:10%; padding-right:15px">
-      <img src="{{env('APP_URL')}}/img/logo.png"></img>
+      <img src="http://accesstechnology.co.uk/youtube/img/logo.png"></img>
     </div>
     
     @endif
