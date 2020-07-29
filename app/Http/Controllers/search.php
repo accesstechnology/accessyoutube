@@ -36,8 +36,19 @@ class search extends Controller
         $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
         
         // $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
+        $opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Accept-language: en\r\n" .
+            "YouTube-Restrict: Strict\r\n"
+            ]
+        ];
+
+$context = stream_context_create($opts);
+
         
-        $content = file_get_contents($url);
+        
+        $content = file_get_contents($url, false, $context);
         $json = json_decode($content, true);
 
         $n=0;
