@@ -52,7 +52,7 @@ class search extends Controller
 //         $json = json_decode($content, true);
 
         $n=0;
-        
+          $i=1;
         //API
         // foreach($json['items'] as $item) {
         
@@ -60,7 +60,7 @@ class search extends Controller
         foreach ($json->entries as $item) {
         
         // //ajax serach
-        // $i=1;
+      
         // foreach ($json['video'] as $item){
 
             $link = new \stdClass;
