@@ -72,11 +72,11 @@ class search extends Controller
             
             
             //FOR YT-DL
-            //$link -> vidId = $item->id;
+            $link -> vidId = $item->id;
             
             //serach ajax
             
-            $link -> vidId = $item['encrypted_id'];
+            // $link -> vidId = $item['encrypted_id'];
             
             if (isset($item['title'])) {
             $link -> title = $item['title'];
