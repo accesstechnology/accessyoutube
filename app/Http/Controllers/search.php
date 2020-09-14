@@ -78,12 +78,12 @@ class search extends Controller
             
             // $link -> vidId = $item['encrypted_id'];
             
-            if (isset($item['title'])) {
-            $link -> title = $item['title'];
-            }
-            else {
-                $link -> title = $v;
-            }
+            // if (isset($item['title'])) {
+            // $link -> title = $item['title'];
+            // }
+            // else {
+            //     $link -> title = $v;
+            // }
             
             
             $link -> thumb = "https://img.youtube.com/vi/".$link->vidId."/hqdefault.jpg";
