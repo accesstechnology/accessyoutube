@@ -27,29 +27,29 @@ class search extends Controller
         
         
         //YT-DL
-        //$output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
-        //$json = json_decode($output);
+        $output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
+        $json = json_decode($output);
         
         
-        //search-ajax
+//         //search-ajax
         
-        $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
+//         $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
         
-        // $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
-        $opts = [
-    "http" => [
-        "method" => "GET",
-        "header" => "Accept-language: en\r\n" .
-            "YouTube-Restrict: Strict\r\n"
-            ]
-        ];
+//         // $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
+//         $opts = [
+//     "http" => [
+//         "method" => "GET",
+//         "header" => "Accept-language: en\r\n" .
+//             "YouTube-Restrict: Strict\r\n"
+//             ]
+//         ];
 
-$context = stream_context_create($opts);
+// $context = stream_context_create($opts);
 
         
         
-        $content = file_get_contents($url, false, $context);
-        $json = json_decode($content, true);
+//         $content = file_get_contents($url, false, $context);
+//         $json = json_decode($content, true);
 
         $n=0;
         
@@ -57,11 +57,11 @@ $context = stream_context_create($opts);
         // foreach($json['items'] as $item) {
         
         //YT-DL
-        // foreach ($json->entries as $item) {
+        foreach ($json->entries as $item) {
         
-        //ajax serach
-        $i=1;
-        foreach ($json['video'] as $item){
+        // //ajax serach
+        // $i=1;
+        // foreach ($json['video'] as $item){
 
             $link = new \stdClass;
             
