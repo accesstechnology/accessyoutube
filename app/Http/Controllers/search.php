@@ -58,6 +58,8 @@ class search extends Controller
         
         //YT-DL
         foreach ($json->entries as $item) {
+            
+            // dd($item);
         
         // //ajax serach
       
@@ -73,6 +75,12 @@ class search extends Controller
             
             //FOR YT-DL
             $link -> vidId = $item->id;
+            if (isset($item->title)) {
+            $link -> title = $item->title;
+            }
+            else {
+                $link -> title = $v;
+            }
             
             //serach ajax
             
