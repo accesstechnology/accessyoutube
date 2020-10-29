@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Goutte\Client as Goutte;
 
 class search extends Controller
 {
@@ -14,6 +15,8 @@ class search extends Controller
     {
         
         $v = str_replace("'","",$v);
+        
+ 
 
         $request->session()->forget('v');
         $request->session()->forget('n');
@@ -25,39 +28,43 @@ class search extends Controller
         // $content = file_get_contents($url);
         // $json = json_decode($content, true);
         
-        
         //YT-DL
-        $output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
-        $json = json_decode($output);
-        
+        // $output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
+            // $json = json_decode($output);
         
 //         //search-ajax
         
 //         $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
         
-//         // $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
-//         $opts = [
-//     "http" => [
-//         "method" => "GET",
-//         "header" => "Accept-language: en\r\n" .
-//             "YouTube-Restrict: Strict\r\n"
-//             ]
-//         ];
+    //     $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
+    //     $opts = [
+    // "http" => [
+    //     "method" => "GET",
+    //     "header" => "Accept-language: en\r\n" .
+    //         "YouTube-Restrict: Strict\r\n"
+    //         ]
+    //     ];
 
 // $context = stream_context_create($opts);
 
         
-        
-//         $content = file_get_contents($url, false, $context);
-//         $json = json_decode($content, true);
+$url = "http://134.122.98.67:3000/api/search?q=".$v;
+    
+// Open the file using the HTTP headers set above
+$return = file_get_contents($url);
+
+$json=json_decode($return);
 
         $n=0;
-          $i=1;
+        $i=1;
+        
         //API
         // foreach($json['items'] as $item) {
         
+        foreach ($json->results as $item) {
+        
         //YT-DL
-        foreach ($json->entries as $item) {
+        // foreach ($json->entries as $item) {
             
             // dd($item);
         
@@ -67,20 +74,22 @@ class search extends Controller
 
             $link = new \stdClass;
             
+            $link -> vidId = $item->id;
+            $link -> title = $item->title;
             //FOR V3 API
             // $link -> vidId = $item['id']['videoId'];
             // $link -> title = $item['snippet']['title'];
             // $link -> thumb = $item['snippet']['thumbnails']['high']['url'];
             
             
-            //FOR YT-DL
-            $link -> vidId = $item->id;
-            if (isset($item->title)) {
-            $link -> title = $item->title;
-            }
-            else {
-                $link -> title = $v;
-            }
+            // //FOR YT-DL
+            // $link -> vidId = $item->id;
+            // if (isset($item->title)) {
+            // $link -> title = $item->title;
+            // }
+            // else {
+            //     $link -> title = $v;
+            // }
             
             //serach ajax
             
