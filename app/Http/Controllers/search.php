@@ -48,7 +48,7 @@ class search extends Controller
 // $context = stream_context_create($opts);
 
         
-$url = "http://134.122.98.67:3000/api/search?q=".$v;
+$url = "http://134.122.98.67:3001/api/search?q=".$v;
     
 // Open the file using the HTTP headers set above
 $return = file_get_contents($url);
