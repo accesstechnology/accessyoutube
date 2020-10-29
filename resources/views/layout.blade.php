@@ -7,18 +7,18 @@
         <meta name="description" content="access: Youtube: An accessible interface for users of assistive technology to search for and play YouTube videos independently.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="http://accesstechnology.co.uk/youtube/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="http://accesstechnology.co.uk/youtube/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="http://accesstechnology.co.uk/youtube/favicon-16x16.png">
-        <link rel="manifest" href="http://accesstechnology.co.uk/youtube/site.webmanifest">
-        <link rel="mask-icon" href="http://accesstechnology.co.uk/youtube/safari-pinned-tab.svg" color="#2e1433">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2e1433">
         <meta name="msapplication-TileColor" content="#2e1433">
         <meta name="theme-color" content="#f7f5f8">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" rel='stylesheet'>
-        <link rel="stylesheet" href="http://accesstechnology.co.uk/youtube/css/css.css">
+        <link rel="stylesheet" href="/css/css.css">
     </head>
     <body>
 
@@ -27,7 +27,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.min.js"></script>
         <script src="http://accesstechnology.co.uk/youtube/js/plugins.js"></script>
-        <script src="http://accesstechnology.co.uk/youtube/js/main.js"></script>
+        <script src="/js/main.js"></script>
 
         <script>
           if (!("autofocus" in document.createElement("input"))) {
