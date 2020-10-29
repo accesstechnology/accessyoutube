@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>@yield('title')</title>
-        <meta name="description" content="access: Youtube: An accessible interface for users of assistive technology to search for and play YouTube videos independently.">
+        <meta name="description" content="access: youtube: An accessible interface for users of assistive technology to search for and play YouTube videos independently.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
