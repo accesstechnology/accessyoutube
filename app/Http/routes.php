@@ -25,3 +25,5 @@ Route::match(array('GET', 'POST'),'/{v}', [
 Route::get('/play/next', 'play@next');
 
 Route::get('/play/{vidId}', 'play@index');
+
+Route::get('/fullscreen/{vidId}', 'fullscreen@index');
