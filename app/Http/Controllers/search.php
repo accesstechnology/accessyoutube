@@ -48,22 +48,22 @@ class search extends Controller
 // $context = stream_context_create($opts);
 
         
-$url = "http://134.122.98.67:3001/api/search?q=".$v;
-    
+//$url = "http://134.122.98.67:3000/api/search?q=".$v;
+  $url = "http://178.128.163.153:3001/api/search?q=".$v;  
 // Open the file using the HTTP headers set above
 
-function url_get_contents ($url) {
-    if (!function_exists('curl_init')){ 
-        die('CURL is not installed!');
-    }
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $output = curl_exec($ch);
-    curl_close($ch);
-    return $output;
-}
-$return = url_get_contents($url);
+//function url_get_contents ($url) {
+//    if (!function_exists('curl_init')){ 
+//        die('CURL is not installed!');
+//    }
+//    $ch = curl_init();
+//    curl_setopt($ch, CURLOPT_URL, $url);
+//    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//    $output = curl_exec($ch);
+//    curl_close($ch);
+//    return $output;
+//}
+$return = file_get_contents($url);
 
 $json=json_decode($return);
 
