@@ -25,3 +25,16 @@ function rewrite ($v) {
 
     return $v;
 }
+
+
+function search ($v) {
+
+    $url = "http://134.122.98.67:3001/api/search?q=".$v;
+        
+    // Open the file using the HTTP headers set above
+    $return = file_get_contents($url);
+    
+    $json=json_decode($return);
+    
+    return $json;
+}
