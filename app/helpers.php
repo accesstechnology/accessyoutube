@@ -29,7 +29,7 @@ function rewrite ($v) {
 
 function search ($v) {
 
-    $url = "http://134.122.98.67:3001/api/search?q=".$v;
+    $url = "http://178.128.163.153:3001/api/search?q=".$v;
         
     // Open the file using the HTTP headers set above
     $return = file_get_contents($url);
