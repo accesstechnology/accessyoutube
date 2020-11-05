@@ -19,55 +19,6 @@ class search extends Controller
         $request->session()->forget('v');
         $request->session()->forget('n');
 
-<<<<<<< HEAD
-=======
-        //YT API
-        // $api = getenv('youtubeAPI');
-         $countryCode = getenv('countryCode');
-        // $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='.$v.'&regionCode='.$countryCode.'&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&maxResults=12&key='.$api;
-        // $content = file_get_contents($url);
-        // $json = json_decode($content, true);
-        
-        //YT-DL
-        // $output = shell_exec('youtube-dl -J ytsearch12:'.$v.' --flat-playlist' );
-            // $json = json_decode($output);
-        
-//         //search-ajax
-        
-//         $url = "https://www.youtube.com/search_ajax?style=json&search_query=".$v."&videoSyndicated=any&videoEmbeddable=true&videoDimension=2d&order=relevance&type=video&safeSearch=strict&hl=".$countryCode;
-        
-    //     $url = "https://www.youtube.com/search_ajax?style=json&embeddable=123&search_query=".$v;
-    //     $opts = [
-    // "http" => [
-    //     "method" => "GET",
-    //     "header" => "Accept-language: en\r\n" .
-    //         "YouTube-Restrict: Strict\r\n"
-    //         ]
-    //     ];
-
-// $context = stream_context_create($opts);
-
-        
-//$url = "http://134.122.98.67:3000/api/search?q=".$v;
-  $url = "http://178.128.163.153:3001/api/search?q=".$v;  
-// Open the file using the HTTP headers set above
-
-//function url_get_contents ($url) {
-//    if (!function_exists('curl_init')){ 
-//        die('CURL is not installed!');
-//    }
-//    $ch = curl_init();
-//    curl_setopt($ch, CURLOPT_URL, $url);
-//    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//    $output = curl_exec($ch);
-//    curl_close($ch);
-//    return $output;
-//}
-$return = file_get_contents($url);
-
-$json=json_decode($return);
-
->>>>>>> 1228b42fb862bfa37c344253b672c8b94c6ebb4c
         $n=0;
         $i=1;
         
