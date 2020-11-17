@@ -23,7 +23,7 @@ class search extends Controller
         $i=1;
         
         $json = search($v);
-        
+
         foreach ($json->results as $item) {
         
             $link = new \stdClass;
