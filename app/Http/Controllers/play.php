@@ -44,6 +44,8 @@ class play extends Controller
             $n=0;
         }
     
+        //preventing errors - shouldn't be necessary, but it is...
+        if(!isset($v)) {$v=$vidId;}
         
         $data=[
             'n' => $n,
