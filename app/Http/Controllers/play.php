@@ -21,18 +21,24 @@ class play extends Controller
         
         $json = search($vidId);
         
-            foreach ($json->results as $item) {
-                
-                session(['v' => $item->title]);
-                
-                $v = session('v');
-                
-                break;
-        
+            if (isset($json->results)) {
+            
+                foreach ($json->results as $item) {
+                    
+                    session(['v' => $item->title]);
+                    
+                    $v = session('v');
+                    
+                    break;
+            
+                }
+    
             }
-
         }
-
+            
+        //preventing errors - shouldn't be necessary, but it is...
+        if(!isset($v)) {$v=$vidId;}
+                
         if ($request->session()->has('n')) {
             $n = session('n');
         }
@@ -43,10 +49,7 @@ class play extends Controller
         else {
             $n=0;
         }
-    
-        //preventing errors - shouldn't be necessary, but it is...
-        if(!isset($v)) {$v=$vidId;}
-        
+
         $data=[
             'n' => $n,
             'v' => $v,
