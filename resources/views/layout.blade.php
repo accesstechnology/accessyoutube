@@ -21,6 +21,12 @@
         <link rel="stylesheet" href="/css/css.css">
     </head>
     <body>
+      
+@if(Session::has('message'))
+
+ <div id="flash" class="row"><div  class="col-md-6 mx-auto alert alert-success"><em> {!! session('message') !!}</em></div></div>
+
+@endif
 
       @yield('content')
 

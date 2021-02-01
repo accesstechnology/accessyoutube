@@ -46,11 +46,18 @@ class search extends Controller
             if ($i++ == 12) break;
 
         }
+        
+        if (!isset($links)) {
+            session()->flash('message', "Sorry, there was a problem. Don't worry, we'll fix it shortly!");
+
+            return redirect('/');
+        }
 
     	$data = [
 			'links' => $links,
 			'v' => $v
 		];
+		
 
 		session(['v' => $v]);
 
