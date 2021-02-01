@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 class play extends Controller
 {
     public function index(Request $request, $vidId)
+
     {
 
         if ($request->session()->has('v')) {
@@ -19,9 +20,10 @@ class play extends Controller
         
         $json = search($vidId);
         
-        $v = rewrite($json->results[0]->id);
-
-        session(['v' => $v]);
+                
+        session(['v' => $json->results[0]->id]);
+            
+        
 
         }
 
