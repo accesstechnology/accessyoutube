@@ -14,23 +14,22 @@ class play extends Controller
     {
 
         if ($request->session()->has('v')) {
-        $v = session('v');
+            $v = session('v');
         }
+        
         else {
         
         $json = search($vidId);
         
             foreach ($json->results as $item) {
                 
-                session(['v' => $item->id]);
+                session(['v' => $item->title]);
                 
                 $v = session('v');
                 
                 break;
         
             }
-            
-        
 
         }
 
@@ -45,7 +44,7 @@ class play extends Controller
             $n=0;
         }
     
-
+        
         $data=[
             'n' => $n,
             'v' => $v,
