@@ -67,6 +67,8 @@ class play extends Controller
         $n = session('n');
 
         $n++;
+        
+        if ($n=20) {$n=0;}
 
         $json = search($v);
         
