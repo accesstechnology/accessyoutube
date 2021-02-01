@@ -26,6 +26,13 @@ class search extends Controller
         
         $json = search($v);
 
+        if (!isset($json->results)) {
+            session()->flash('message', "Sorry, there was a problem with that video search. Don't worry, we'll fix it shortly!");
+            Log::critical("no results - ".$v);
+            return redirect('/');
+        }
+             
+             
         foreach ($json->results as $item) {
         
             $link = new \stdClass;
@@ -51,7 +58,7 @@ class search extends Controller
         
         if (!isset($links)) {
             session()->flash('message', "Sorry, there was a problem with that video search. Don't worry, we'll fix it shortly!");
-            Log::critical($v);
+            Log::critical("no links - ".$v);
             return redirect('/');
         }
 
