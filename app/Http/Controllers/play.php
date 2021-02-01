@@ -19,12 +19,9 @@ class play extends Controller
         else {
         
         $json = search($vidId);
-        
                 
         session(['v' => $json->results[0]->id]);
             
-        
-
         }
 
         if ($request->session()->has('n')) {
