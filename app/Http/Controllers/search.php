@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Goutte\Client as Goutte;
+use Illuminate\Support\Facades\Log;
+
 
 class search extends Controller
 {
@@ -49,7 +51,7 @@ class search extends Controller
         
         if (!isset($links)) {
             session()->flash('message', "Sorry, there was a problem with that video search. Don't worry, we'll fix it shortly!");
-
+            Log::critical($v);
             return redirect('/');
         }
 
