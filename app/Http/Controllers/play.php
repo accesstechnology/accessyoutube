@@ -35,6 +35,12 @@ class play extends Controller
         else {
             $n=0;
         }
+        
+        if (!isset($v)){
+            session()->flash('message', "Sorry, there was a problem with playing that video. Don't worry, we'll fix it shortly!");
+            Log::critical('missing $v on play?');
+            return redirect('/');
+        }
 
         $data=[
             'n' => $n,
