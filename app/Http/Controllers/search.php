@@ -48,7 +48,7 @@ class search extends Controller
         }
         
         if (!isset($links)) {
-            session()->flash('message', "Sorry, there was a problem. Don't worry, we'll fix it shortly!");
+            session()->flash('message', "Sorry, there was a problem with that video search. Don't worry, we'll fix it shortly!");
 
             return redirect('/');
         }
