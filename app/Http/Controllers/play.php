@@ -20,7 +20,8 @@ class play extends Controller
         
         $json = search($vidId);
                 
-        session(['v' => $json->results[0]->id]);
+        session(['v' => $json->results[0]->title]);
+        $v = session('v');
             
         }
 
@@ -34,6 +35,7 @@ class play extends Controller
         else {
             $n=0;
         }
+    
     
 
         $data=[
