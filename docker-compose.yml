@@ -6,3 +6,10 @@ services:
       volumes:
             - .:/app
       restart: always
+      container_name: youtube_scraper
+      networks:
+        - youtube
+
+networks:
+  youtube:
+    external: true
