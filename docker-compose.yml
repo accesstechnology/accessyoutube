@@ -6,7 +6,7 @@ services:
       volumes:
             - .:/app
       restart: always
-      container_name: youtube_scraper
+      container_name: accessyoutube
       networks:
         - youtube
 
