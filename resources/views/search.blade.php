@@ -1,6 +1,6 @@
 {!! Form::open(array('url' => 'v')) !!}
 <div class="row column search">
-  <div class="input-group search  {{ $front or 'result'}}">
+  <div class="input-group search  {{ $front ?? 'result'}}">
          
         @if(!isset($front))
         

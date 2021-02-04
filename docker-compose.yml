@@ -6,3 +6,11 @@ services:
       volumes:
             - .:/app
       restart: always
+      container_name: accessyoutube
+      networks:
+        - youtube
+      ports:
+        - 8000:8000
+networks:
+  youtube:
+    external: true

@@ -18,7 +18,7 @@ class dbCheck
 
         $v = $request->v;
 
-        $words = DB::table('bad_words')->lists('word');
+        $words = DB::table('bad_words')->pluck('word');
 
         foreach ($words as $word) {
 
