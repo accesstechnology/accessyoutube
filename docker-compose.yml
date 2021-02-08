@@ -13,7 +13,11 @@ services:
     volumes:
       - ./:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    #ports for php development server
+    ports:
+      - 8080:8080
     networks:
+      - youtube
       - caddy
     labels:
       caddy: ${APP_NAME}.accesstechnology.co.uk
@@ -28,4 +32,6 @@ services:
 #Docker Networks
 networks:
   caddy:
+    external: true
+  youtube:
     external: true
