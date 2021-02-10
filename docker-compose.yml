@@ -18,6 +18,10 @@ services:
       - caddy
     labels:
       caddy: ${APP_URL}
+<<<<<<< HEAD
+=======
+
+>>>>>>> ee626281baaf8eb606d29e3c401c2aec2ffb1ecd
       caddy.root: "* $PWD/public"
       caddy.php_fastcgi: "{{upstreams 9000}}"
       caddy.php_fastcgi.root: /var/www/public
