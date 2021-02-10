@@ -28,7 +28,7 @@ class clear extends Controller
      */
     public function create()
     {
-               $words = DB::table('bad_words')->lists('word');
+        $words = DB::table('bad_words')->pluck('word');
 
         foreach ($words as $word) {
 
