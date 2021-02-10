@@ -15,7 +15,10 @@ class search extends Controller
 
     public function index(Request $request, $v)
     {
+        
+        //hacky workaround for blank searches. something to do with Larvel 8 and using both get&post
 
+        if($v=='v') {return redirect('/');}
         $v = str_replace("'","",$v);
 
         $request->session()->forget('v');
