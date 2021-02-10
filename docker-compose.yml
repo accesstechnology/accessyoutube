@@ -14,13 +14,13 @@ services:
       - ./:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     #ports for php development server
-    ports:
-      - 8080:8080
+   # ports:
+   #  - 8009:8080
     networks:
       - youtube
       - caddy
     labels:
-      caddy: ${APP_NAME}.accesstechnology.co.uk
+      caddy: dev.accessyoutube.org.uk
       caddy.root: "* $PWD/public"
       caddy.php_fastcgi: "{{upstreams 9000}}"
       caddy.php_fastcgi.root: /var/www/public
