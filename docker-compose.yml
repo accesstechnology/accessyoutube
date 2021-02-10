@@ -13,14 +13,12 @@ services:
     volumes:
       - ./:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
-    #ports for php development server
-   # ports:
-   #  - 8009:8080
     networks:
       - youtube
       - caddy
     labels:
-      caddy: dev.accessyoutube.org.uk
+      caddy: ${APP_URL}
+
       caddy.root: "* $PWD/public"
       caddy.php_fastcgi: "{{upstreams 9000}}"
       caddy.php_fastcgi.root: /var/www/public
@@ -28,7 +26,7 @@ services:
       caddy.file_server:
       # remove the following line when you have verified your setup
       # Otherwise you risk being rate limited by let's encrypt
-      caddy.tls.ca: https://acme-staging-v02.api.letsencrypt.org/directory
+#      caddy.tls.ca: https://acme-staging-v02.api.letsencrypt.org/directory
 #Docker Networks
 networks:
   caddy:
