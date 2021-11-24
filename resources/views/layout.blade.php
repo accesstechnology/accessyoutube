@@ -32,7 +32,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.1/foundation.min.js"></script>
-        <script src="http://accesstechnology.co.uk/youtube/js/plugins.js"></script>
+        <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
 
         <script>

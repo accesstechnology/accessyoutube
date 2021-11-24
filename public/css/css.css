@@ -4,6 +4,8 @@ body {
     background-color: #f7f5f8;
     font-family: 'Nunito', sans-serif;
 }
+h1{font-size: 1.5rem}
+h2{font-size: 1rem}
 .title {padding:1rem;}
 .front #v {font-size:3rem; height: 4rem;}
 .front .button {padding:1.2rem 1rem; font-size:1.5rem;}

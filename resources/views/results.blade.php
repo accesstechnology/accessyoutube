@@ -7,7 +7,7 @@
     @include('search')
 
 <div class="row align-center text-center small-up-2 medium-up-3 large-up-4">
-
+<h1>Search Results</h1>
     @foreach ($links as $link)
 
 <div class="column">
@@ -16,7 +16,7 @@
             <a href="play/{{ $link -> vidId }}" accesskey="{{ $link -> accesskey }}">
                 <img src="{{ $link -> thumb }}" alt="{{ $link -> title }}"/>
                 <div class="content">
-                    <p>{{ $link -> title }}</p>
+                    <h2>{{ $link -> title }}</h2>
                 </div>
             </a>
         </div>

@@ -10,22 +10,22 @@
     <div class="row align-center text-center small-up-4">
       <div class="column">
         <div class="card focus control" id="play">
-          <a href="#" accesskey="p"><i class="fi-play"></i><p>Pause / Play</p></a>
+          <a href="#" accesskey="p"><i class="fi-play"></i><h1>Pause / Play</h1></a>
         </div>
       </div>
        <div class="column">
         <div class="card focus control" onClick="window.location.reload()">
-          <a href="#" accesskey="r"><i class="fi-loop"></i><p>Repeat video</p></a>
+        <a href="#" accesskey="r"><i class="fi-loop"></i><h1>Repeat video</h1></a>
         </div>
       </div>
        <div class="column">
         <div class="card focus control">
-          <a href="next" accesskey="n"><i class="fi-next"></i><p>Next video</p></a>
+        <a href="next" accesskey="n"><i class="fi-next"></i><h1>Next video</h1></a>
         </div>
       </div>
        <div class="column">
         <div class="card focus control">
-          <a href="/{{ $v }}" accesskey="b"><i class="fi-previous"></i><p>Back to search results</p></a>
+        <a href="/{{ $v }}" accesskey="b"><i class="fi-previous"></i><h1>Back to search results</h1></a>
         </div>
       </div>
     </div>

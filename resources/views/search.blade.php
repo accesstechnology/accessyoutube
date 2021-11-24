@@ -5,7 +5,7 @@
         @if(!isset($front))
         
         <div class="input-group-button" style="width:10%; padding-right:15px">
-      <img src="/img/logo.png"></img>
+      <img src="/img/logo.png" alt="access: youtube, provided by access: technology"></img>
     </div>
     
     @endif
