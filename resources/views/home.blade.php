@@ -24,7 +24,7 @@
    </br></br>
  <div>
      <p>We now offer EHCP-funded AT assessments and intervention.</p>
-<p>Contact us at <a href="mailto:domore@accesstechnology.co.uk">domore@accesstechnology.co.uk to find out more.</p>
+<p>Contact us at <a href="mailto:domore@accesstechnology.co.uk">domore@accesstechnology.co.uk</a> to find out more.</p>
 <p>#domorewithtechnology</p>
     
         
