@@ -19,7 +19,7 @@
 </br></br></br>   
            <h5>access: youtube is provided for free by:</h5>
      <a tabindex="-1" href="https://accesstechnology.co.uk" target="_blank"><img tabindex="-1" width="200px"   src="https://accesstechnology.co.uk/content/images/2024/03/Blue-Light-logo.png" alt="access: technology. working with people. empowering through technology"/></a>
-        <p class="sub">access: technology is an assistive technology consultancy service specialising in supporting clients with brain injuries within the medico-legal sector.</p >
+        
  </div>
    </br></br>
  <div>
