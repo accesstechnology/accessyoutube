@@ -16,7 +16,7 @@
             </a>
             
             <div style="margin-top: 20px; font-size: 0.9em; color: #555;">
-                <p style="font-weight: bold;">We now offer EHCP-funded AT assessments and intervention.</p>
+                <a  tabindex="-1" href="https://accesstechnology.co.uk/assistive-technology/ehcp-funded-assistive-technology-assessment/" target="_blank"><p style="font-weight: bold;">We now offer EHCP-funded AT assessments and intervention.</p></a>
                 <p>Contact us at <a href="mailto:domore@accesstechnology.co.uk" style="color: #007bff;">domore@accesstechnology.co.uk</a> to find out more.</p>
                 <p style="font-weight: bold;">#domorewithtechnology</p>
             </div>
