@@ -10,7 +10,7 @@
         </div>
         
         <div class="additional-info" style="margin-top: 250px; padding: 20px; background-color: #f8f8f8; border-radius: 10px;">
-            <h5 style="color: #333;">access: youtube is provided by:</h5>
+            <p style="color: #333;">access: youtube is provided by:</p>
             <a tabindex="-1" href="https://accesstechnology.co.uk" target="_blank">
                 <img tabindex="-1" width="150px" src="https://accesstechnology.co.uk/content/images/2024/03/Blue-Light-logo.png" alt="access: technology. working with people. empowering through technology" style="margin: 20px 0;">
             </a>
